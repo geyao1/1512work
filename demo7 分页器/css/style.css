@@ -1,0 +1,25 @@
+*{
+   padding:0;
+   margin:0;
+}
+#ul li{
+   list-style: none;
+   float:left;
+   padding:6px;
+   font-size:13px;
+   border:1px solid #ccc;
+   margin:2px;
+   cursor:pointer;
+   color:#585858;
+}      
+#div{
+   width:100%;
+   text-align: center;
+   position:absolute;
+   bottom:30px;
+}
+#ul .background{
+   background:#39C6F4;
+   color:white;
+   border:1px solid #39C6F4;
+}
