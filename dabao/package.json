@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "webpack": "^3.10.0"
+  },
+  "scripts":{
+	"dev":"webpack --config webpack.config.js"
+  }
+}
+
+

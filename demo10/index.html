@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		/*.bg1{background: red;}*/
+	</style>
+</head>
+<body>
+<div id="box">
+	<form>
+        <p>
+            用户名：<input type="text" class="username">
+        </p>
+        <p>
+            密码：<input type="password" class="password">
+        </p>
+        <p>
+            <input type="button" value="立即登录" @click="login()">
+        </p>
+    </form>
+	<!-- <div v-on:click="res">{{msg}}</div>
+	<div v-html='msgs'></div>
+	<div><input type="text" v-model="msgs"></div>
+	<div v-bind:class="{'bg1':bg1}">{{msg}}</div>
+	<div v-if="seen">
+		<div>坚持就是胜利</div>
+		<div>坚持到底</div>
+	</div>
+	<div v-if="ok">
+		失败是成功之母
+	</div> -->
+	
+</div>
+	<script type="text/javascript" src="vue.min.js"></script>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script>
+		new Vue({
+			el:"#box",
+			data:{
+				users:[
+					{
+						username:"zs",
+						password:"123456"
+					},
+					{
+						username:"admin",
+						password:"123456"
+					}
+				]
+			},
+			methods:{
+				login:function(){
+					var username=$(".username").val();
+					var password=$(".password").val();
+					var flag = false;
+					for(var i=0;len=this.users.length,i<len;i++){
+						if(this.users[i].username===username&&this.users[i].password===password){
+							flag=true;
+							alert("登录成功")
+						}
+					}
+					if(!flag){
+						alert("用户名/密码不正确")
+					}
+				}
+			}
+		})
+		// new Vue({
+		// 	el:"#box",
+		// 	data:{
+		// 		msg:"努力学习",
+		// 		msgs:"<h1>天天向上</h1>",
+		// 		bg1:true,
+		// 		seen:true,
+		// 		ok:true
+		// 	},
+		// 	methods:{
+		// 		res:function(){
+		// 			alert("珍惜时间");
+		// 		}
+		// 	}
+		// })
+	</script>
+</body>
+</html>
